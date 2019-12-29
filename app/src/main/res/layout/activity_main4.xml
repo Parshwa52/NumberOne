@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/download"
+    tools:context="com.example.android.myapplication.Main4Activity">
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="42sp"
+        android:layout_above="@+id/bt1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        tools:layout_editor_absoluteX="99sp"
+        tools:layout_editor_absoluteY="205sp" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Enter the number"
+        android:textSize="35sp"
+        tools:layout_editor_absoluteX="0sp"
+        tools:layout_editor_absoluteY="16sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Output"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="120sp"
+        tools:layout_editor_absoluteY="305sp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="373sp"
+        android:layout_height="178sp"
+        android:layout_below="@+id/tv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textIsSelectable="true"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="22sp"
+        tools:layout_editor_absoluteY="398sp" />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv2"
+        android:layout_alignLeft="@+id/copybtn"
+        android:layout_alignStart="@+id/copybtn"
+        android:layout_marginBottom="33dp"
+        android:background="@android:color/holo_orange_light"
+        android:gravity="center"
+        android:onClick="add"
+        android:text="Convert"
+        android:textColor="@android:color/background_dark" />
+
+    <Button
+        android:id="@+id/copybtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_alignLeft="@+id/adView"
+        android:layout_alignStart="@+id/adView"
+        android:layout_marginBottom="11dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="Copy"
+        android:textColor="@android:color/background_dark" />
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+    <Button
+        android:id="@+id/shbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/copybtn"
+        android:layout_alignBottom="@+id/copybtn"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_toEndOf="@+id/copybtn"
+        android:layout_toRightOf="@+id/copybtn"
+        android:textColor="@android:color/background_dark"
+        android:background="@android:color/holo_orange_light"
+        android:text="Share" />
+
+    <Button
+        android:id="@+id/clrbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bt1"
+        android:layout_alignLeft="@+id/shbtn"
+        android:layout_alignStart="@+id/shbtn"
+        android:layout_below="@+id/et1"
+        android:background="@android:color/holo_orange_light"
+        android:text="CLEAR"
+        android:textColor="@android:color/background_dark" />
+</RelativeLayout>
